@@ -1,0 +1,80 @@
+body {
+	box-sizing: border-box;
+}
+
+.header {
+	//background-color: #6bce90;
+}
+
+.wrapper {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.logo {
+	float: left;
+	width: 100px;
+}
+
+.menu {
+	float: right;
+	position: relative;
+	height: 118px;
+	font-size: 20px;
+}
+
+.menu li {
+	float: left;
+	margin: 10px 5px;
+}
+
+.social-buttons a {
+	color: #fff;
+    background: #505b71;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    float: left;
+    text-align: center;
+    
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    margin: 0 5px;
+}
+
+.social-buttons li:first-of-type a{
+	margin-right: 40px;
+}
+
+.social-buttons a:hover {
+	background: #48cfad;
+}
+
+
+.main-menu{
+	position: absolute;
+	bottom:0px;
+	right: 10px;
+}
+
+.main-menu li {
+	width: 80px;
+	text-align: center;
+}
+
+.active {
+	border: 1px dashed #505b71;	
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
