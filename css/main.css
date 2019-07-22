@@ -87,6 +87,32 @@ body {
   clear: both;
 }
 
+.main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.star ul {
+    float: left;
+}
+
+.star ul li {
+    display: inline-block;
+    vertical-align: sub;
+}
+
+.star ul li i {
+    height: 16px;
+    width: 16px;
+    background: url(../img/img-sprite.png) no-repeat -386px -114px;
+    display: inline-block;
+}
+
+.star .half {
+    background: url(../img/img-sprite.png) no-repeat -407px -113px;;
+}
+
 .copyright{
 	margin: 15px 0;
 }
