@@ -3,7 +3,7 @@ body {
 	height: 100%;
 }
 
-.header {
+.header, .footer {
 	background-color: #dddddd;
 	width: 100%;
 }
@@ -85,6 +85,42 @@ body {
   content: "";
   display: table;
   clear: both;
+}
+
+.copyright{
+	margin: 15px 0;
+}
+
+.footer .logo {
+	margin-top: 25px;
+}
+
+.flex-block {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.copyright p {
+	text-align: center;
+}
+
+.addition-info h3{
+	text-align: center;
+	font-size: 20px;
+	margin-bottom: 15px; 
+}
+
+.addition-info a, .addition-info span {
+	color: #505b71;
+	text-decoration: none; 
+	max-width: 250px;
+}
+
+.addition-info img {
+	height: 20px;
+	width: 20px;
+	padding: 5px 10px;
 }
 
 @media screen and (max-width: 1280px){
@@ -233,5 +269,5 @@ body {
 	.logo {
 		float: none;
 		margin:0 auto;
-	}
+	}	
 }
