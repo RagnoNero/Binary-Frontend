@@ -1,5 +1,8 @@
-body {
+div {
 	box-sizing: border-box;
+}
+
+body {
 	height: 100%;
 }
 
@@ -9,7 +12,7 @@ body {
 }
 
 .wrapper {
-	width: 1200px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 
@@ -38,22 +41,22 @@ body {
 
 .social-buttons a, .search-button a {
 	color: #fff;
-    background: #505b71;
-    padding: 10px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50px;
-    -moz-border-radius: 50px;
-    -webkit-border-radius: 50px;
-    float: left;
-    text-align: center;
-    
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
-    margin: 0 5px;
+	background: #505b71;
+	padding: 10px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	float: left;
+	text-align: center;
+
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+	margin: 0 5px;
 }
 
 .search-button a {
@@ -82,35 +85,122 @@ body {
 }
 
 .clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.aligner {
+	margin: 0 auto; 
 }
 
 .main {
+	float: left;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	background-color: red;
+	width: 900px;
 }
 
+aside {
+	display: inline-block;
+	width: 285px;
+	margin: 5px; 
+}
+
+.image {
+	width: 60px;
+	float: left;
+	margin: 5px;
+}
+
+.name {
+	font-weight: bold;
+}
+
+.date {
+	font-style: italic;
+}
+
+.description {
+	text-align: justify;
+}
+
+aside .social-buttons {
+	margin: 25px 30px;
+	height: 50px; 
+}
+
+.subscribe {
+	margin: 20px 0 20px 5px;
+}
+
+.subscribe input {
+	width: 100%;
+	height: 20px;
+	margin: 5px 0;
+}
+
+.subscribe input[type="button"] {
+	height: 30px;
+}
+
+.tags {
+	border: 1px solid black;
+	text-align: center;
+	margin: 20px 0 0 5px;
+	padding: 5px;
+}
+
+.tags p {
+	padding: 5px 0;
+}
+
+.card {
+	width: 290px;
+	height: 200px;
+	margin: 5px;
+	padding: 5px;
+	border: 1px dashed grey;
+}
+
+.card:hover {
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+.card:hover img {
+	transition-duration: 0;
+	-webkit-transform: scale(calc(1/1.2));
+	-moz-transform: scale(calc(1/1.2));
+	-o-transform: scale(calc(1/1.2));
+	-ms-transform: scale(calc(1/1.2));
+	transform: scale(calc(1/1.2));
+}
+
+
 .star ul {
-    float: left;
+	float: left;
 }
 
 .star ul li {
-    display: inline-block;
-    vertical-align: sub;
+	display: inline-block;
+	vertical-align: sub;
 }
 
 .star ul li i {
-    height: 16px;
-    width: 16px;
-    background: url(../img/img-sprite.png) no-repeat -386px -114px;
-    display: inline-block;
+	height: 16px;
+	width: 16px;
+	background: url(../img/img-sprite.png) no-repeat -386px -114px;
+	display: inline-block;
 }
 
 .star .half {
-    background: url(../img/img-sprite.png) no-repeat -407px -113px;;
+	background: url(../img/img-sprite.png) no-repeat -407px -113px;;
 }
 
 .copyright{
@@ -149,38 +239,51 @@ body {
 	padding: 5px 10px;
 }
 
-@media screen and (max-width: 1280px){
-	.wrapper {
-		width: 840px;
+@media screen and (max-width: 1200px){
+	.main {
+		width: 600px;
+	}
+	.aligner {
+		width: 900px;
 	}
 }
 
-@media screen and (max-width: 840px){
-	.wrapper {
-		width: 100%;
+@media screen and (max-width: 900px){
+
+	.main {
+		width: 300px;
 	}
+	.aligner {
+		width: 600px;
+	}
+
 }
 
-@media screen and (max-width: 500px){
-	.wrapper {
-		width: 100%;
+@media screen and (max-width: 600px){
+	.aligner {
+		width: 300px;
+	}
+
+	.main {
+		float: none;
+		width: 300px;
 	}
 
 	.menu {
-	float: left;
-	position: static;
-	height: 60px;
-	width: 100%;
-	font-size: 20px;
+		float: left;
+		position: static;
+		height: 60px;
+		width: 100%;
+		font-size: 20px;
 	}
 
 	.menu input {
-	display: none;
+		display: none;
 	}
 
 	.menu li {
-	float: right;
-	margin: 10px 5px;
+		float: right;
+		margin: 10px 5px;
 	}
 
 	.social-buttons {
@@ -200,36 +303,36 @@ body {
 	}
 
 	.lines input {
-	  display: block;
-	  width: 40px;
-	  height: 32px;
-	  margin-bottom: 5px;
-	  margin-left: 10px;
-	  position: absolute;
-	  cursor: pointer;
-	  opacity: 0;
-	  z-index: 2;	  
-	  -webkit-touch-callout: none;
+		display: block;
+		width: 40px;
+		height: 32px;
+		margin-bottom: 5px;
+		margin-left: 10px;
+		position: absolute;
+		cursor: pointer;
+		opacity: 0;
+		z-index: 2;	  
+		-webkit-touch-callout: none;
 	}
 
 	.lines span {
-	  display: block;
-	  width: 33px;
-	  height: 4px;
-	  margin-bottom: 5px;
-	  margin-left: 10px;
-	  position: relative;
-	  
-	  background: #000;
-	  border-radius: 3px;
-	  
-	  z-index: 1;
-	  
-	  transform-origin: 4px 0px;
-	  
-	  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-	              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-	              opacity 0.55s ease;
+		display: block;
+		width: 33px;
+		height: 4px;
+		margin-bottom: 5px;
+		margin-left: 10px;
+		position: relative;
+
+		background: #000;
+		border-radius: 3px;
+
+		z-index: 1;
+
+		transform-origin: 4px 0px;
+
+		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+		background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+		opacity 0.55s ease;
 	}
 
 	.main-menu {
@@ -257,11 +360,11 @@ body {
 		background: #232323;
 	}
 
-	 .lines input:checked ~ span:nth-last-child(3)
-	 {
-	 	opacity: 0;
-	 	transform: rotate(0deg) scale(0.2, 0.2);
-	 }
+	.lines input:checked ~ span:nth-last-child(3)
+	{
+		opacity: 0;
+		transform: rotate(0deg) scale(0.2, 0.2);
+	}
 
 	.lines input:checked ~ span:nth-last-child(2)
 	{
@@ -270,7 +373,7 @@ body {
 
 	.lines input:checked ~ ul
 	{
-	  transform: none;
+		transform: none;
 	}
 
 	.lines input:checked ~ .main-menu {
@@ -295,5 +398,5 @@ body {
 	.logo {
 		float: none;
 		margin:0 auto;
-	}	
+	}
 }
